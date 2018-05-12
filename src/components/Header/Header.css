@@ -1,0 +1,10 @@
+.logo{
+  padding: 50px 0px 50px 0px;
+}
+
+.horizontal-rule {
+  height: 10px;
+  display: block;
+  background: url('../../images/line.svg') repeat-x;
+  background-size: 100% 100%;
+}

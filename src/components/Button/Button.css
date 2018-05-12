@@ -1,0 +1,48 @@
+.button {
+  cursor: pointer;
+  display: block;
+  border: none;
+  outline: none;
+}
+.hamburger {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  background: url('../../images/traplord_sprites.png') no-repeat;
+}
+/*
+.hamburger::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity .5s;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background: url('../../images/traplord_sprites.png') no-repeat 0 -36px;
+}
+.hamburger:hover::after {
+  opacity: 1;
+  transition: opacity .5s;
+}
+*/
+.hamburger.active {
+  width: 24px;
+  height: 24px;
+  transition: opacity .5s;
+  background: url('../../images/traplord_sprites.png') no-repeat -36px 0;
+}
+
+/*.hamburger.hover {
+ *
+  background: url('../../images/traplord_sprites.png') 0 -36px no-repeat;
+  transition: background 2s;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  display: inline-block;
+}
+*/

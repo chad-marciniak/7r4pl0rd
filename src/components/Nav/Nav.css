@@ -1,3 +1,33 @@
 .nav-container {
   padding-top: 10px;
+  display: grid;
+  grid-template-columns: 25px 135px 135px 135px 135px;
 }
+
+/*
+.nav-enter {
+  opacity: 0.01;
+}
+
+.nav-enter.nav-enter-active {
+  opacity: 1;
+  transition: opacity 5000ms ease-in;
+}
+
+.nav-leave {
+  opacity: 1;
+}
+
+.nav-leave.nav-leave-active {
+  opacity: 0.01;
+  transition: opacity 30000ms ease-in;
+}
+.nav-appear {
+  opacity: 0.01;
+}
+
+.nav-appear.nav-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+*/

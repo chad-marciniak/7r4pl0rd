@@ -1,8 +1,14 @@
+@font-face {
+  font-family: Arimo;
+}
+
 .button {
   cursor: pointer;
   display: block;
   border: none;
   outline: none;
+  font-size: 24px;
+  background: none;
 }
 .hamburger {
   width: 24px;
@@ -10,39 +16,70 @@
   position: relative;
   background: url('../../images/traplord_sprites.png') no-repeat;
 }
-/*
-.hamburger::after {
-  content: "";
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  opacity: 0;
-  transition: opacity .5s;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  background: url('../../images/traplord_sprites.png') no-repeat 0 -36px;
-}
-.hamburger:hover::after {
-  opacity: 1;
-  transition: opacity .5s;
-}
-*/
 .hamburger.active {
   width: 24px;
   height: 24px;
-  transition: opacity .5s;
+  position: relative;
   background: url('../../images/traplord_sprites.png') no-repeat -36px 0;
 }
-
-/*.hamburger.hover {
- *
-  background: url('../../images/traplord_sprites.png') 0 -36px no-repeat;
-  transition: background 2s;
-  width: 24px;
-  height: 24px;
-  position: relative;
-  display: inline-block;
+.contact {
+  animation: forwards;
+  animation-duration: 2s;
+  animation-name: colorup1;
 }
-*/
+.mission {
+  animation: forwards;
+  animation-duration: 2s;
+  animation-name: colorup2;
+}
+.archives {
+  animation: forwards;
+  animation-duration: 2s;
+  animation-name: colorup3;
+}
+.main {
+  animation: forwards;
+  animation-duration: 2s;
+  animation-name: colorup4;
+}
+@keyframes colorup1 {
+  from {
+    color: #3f3f3f;
+    opacity: 0;
+  }
+  to {
+    color: #12A9CC;
+    opacity: 1;
+  }
+}
+@keyframes colorup2 {
+  from {
+    color: #3f3f3f;
+    opacity: 0;
+  }
+  to {
+    color: #6565E5;
+    opacity: 1;
+  }
+}
+@keyframes colorup3 {
+  from {
+    color: #3f3f3f;
+    opacity: 0;
+  }
+  to {
+    color: #B115BA;
+    opacity: 1;
+  }
+}
+@keyframes colorup4 {
+  from {
+    color: #3f3f3f;
+    opacity: 0;
+  }
+  to {
+    color: #C11151;
+    opacity: 1;
+  }
+}
+

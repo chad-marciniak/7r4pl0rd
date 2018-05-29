@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import ButtonView from './ButtonView.js';
-// import { pushClickData }  '
+import store from '../../store.js';
+import { bindActionCreators } from 'redux';
+import { toggleNav } from '../../actions/nav.js';
 import './Button.css';
 
 class ButtonComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: false,
+      active: '',
       hover: false,
     };
     this.buttonHover = this.buttonHover.bind(this);
@@ -24,17 +27,33 @@ class ButtonComponent extends Component {
   }
  
   buttonClick(e) {
-    if (this.state.active === 'active') {
-      this.setState({ active: false });
-    } else {
+    this.props.action(this.props.data);
+    this.state.active === 'active' ?
+      this.setState({ active: '' }) :
       this.setState({ active: 'active' });
-    }
   }
 
   render() {
-    return (<ButtonView onBlur={this.buttonBlur} onHover={this.buttonHover} onClick={this.buttonClick} name={this.props.name} active={this.state.active} />);
+    return (<ButtonView 
+              onBlur={this.buttonBlur} 
+              onHover={this.buttonHover} 
+              onClick={this.buttonClick} 
+              name={this.props.name} 
+              text={this.props.text}
+              active={this.state.active} 
+            />);
   }
 }
 
-const Button = connect (null, null)(ButtonComponent);
+const mapStateToProps = state => {
+  return {};
+};
+
+const mapDispatchToProps = dispatch => bindActionCreators(
+  { toggleNav }, dispatch
+);
+const Button = connect (mapStateToProps, mapDispatchToProps)(ButtonComponent);
+Button.PropTypes = {
+  pushClickData: PropTypes.function,
+};
 export default Button;

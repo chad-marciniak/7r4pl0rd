@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../Header/Header.js';
-import Nav from '../Nav/Nav.js';
+import Header from '../Header/Header';
+import Nav from '../Nav/Nav';
 import './Layout.css';
 
 const Layout = () => (
@@ -11,9 +11,7 @@ const Layout = () => (
         <Nav />
       </div>
     </div>
-  
   </div>
 );
 
 export default Layout;
-

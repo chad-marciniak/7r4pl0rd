@@ -1,13 +1,17 @@
 @font-face {
-  font-family: Arimo;
+  font-family: "Arimo";
+  src: url("../../font/Arimo.WOFF") format("woff");
 }
 
 .button {
+  font-family: Arimo;
+  text-transform: uppercase;
+  font-weight: bold;
   cursor: pointer;
   display: block;
   border: none;
   outline: none;
-  font-size: 24px;
+  font-size: 22px;
   background: none;
 }
 .hamburger {
@@ -26,6 +30,7 @@
   animation: forwards;
   animation-duration: 2s;
   animation-name: colorup1;
+  text-shadow: 1.2px 1.2px #006677 !important; 
 }
 .mission {
   animation: forwards;

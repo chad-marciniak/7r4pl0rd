@@ -3,32 +3,37 @@ import Button from '../Button/Button.js';
 import './Nav.css';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { toggleNav, setLocation } from '../../actions/nav.js';
 
 class NavComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-    buttons: [],
-    buttonArray: [
-      { name: 'contact', link: '/', data: { page: 'contact' } },
-      { name: 'mission', link: '/', data: { page: 'mission' } }, 
-      { name: 'archives', link: '/', data: { page: 'archives' } },
-      { name: 'main', link: '/', data: { page: 'main' } },
-      ],
+      buttons: [],
+      buttonArray: [
+        { name: 'contact', link: '/', data: { page: 'contact' } },
+        { name: 'mission', link: '/', data: { page: 'mission' } },
+        { name: 'archives', link: '/', data: { page: 'archives' } },
+        { name: 'main', link: '/', data: { page: 'main' } }
+      ]
     };
-  };
+  }
   componentDidMount() {
     for (let i = 0, ln = this.state.buttonArray.length; i < ln; i++) {
-      setTimeout((x) => {
-        this.setState({ buttons: [...this.state.buttons, this.state.buttonArray[x]] }); 
-       },1000*i, i);
+      setTimeout(
+        x => {
+          this.setState({
+            buttons: [...this.state.buttons, this.state.buttonArray[x]]
+          });
+        },
+        1000 * i,
+        i
+      );
     }
   }
-  
+
   render() {
-    const links = this.state.buttons.map((button, key) => 
+    const links = this.state.buttons.map((button, key) => (
       <Button
         key={key}
         text={button.name}
@@ -36,12 +41,16 @@ class NavComponent extends Component {
         name={button.name}
         data={button.data.page}
       />
-    );
+    ));
 
     return (
       <div className="nav-container">
-        <Button name='hamburger' action={this.props.toggleNav} data={!this.props.open}/>
-          {links}
+        <Button
+          name="hamburger"
+          action={this.props.toggleNav}
+          data={!this.props.open}
+        />
+        {links}
       </div>
     );
   }
@@ -49,13 +58,15 @@ class NavComponent extends Component {
 
 const mapStateToProps = state => {
   return {
-    open: state.nav.open,
+    open: state.nav.open
   };
 };
 
-const mapDispatchToProps = dispatch => bindActionCreators(
-  { toggleNav, setLocation }, dispatch
-);
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ toggleNav, setLocation }, dispatch);
 
-const Nav = connect (mapStateToProps, mapDispatchToProps)(NavComponent);
+const Nav = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(NavComponent);
 export default Nav;

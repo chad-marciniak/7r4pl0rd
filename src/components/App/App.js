@@ -1,13 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-import Layout from '../Layout/Layout.js';
-class AppShell extends Component { 
-  render() {
-     return(
-       <div><Layout /></div> 
-    );
-  };
-}
+import Layout from '../Layout/Layout';
 
-const App = connect(null, null)(AppShell);
+const AppShell = () => (
+  <div>
+    <Layout />
+  </div>
+);
+
+const App = connect(
+  null,
+  null
+)(AppShell);
 export default App;

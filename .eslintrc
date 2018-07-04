@@ -1,6 +1,31 @@
 {
-  "extends": "airbnb",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true,
+    },
+  },
+  "extends": [
+    "prettier",
+  ],
+  "globals": {
+    "document": true,
+    "window": true,
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "commonjs": true,
+    "es6": true,
+  },
+  "plugins": ["prettier", "react"],
   "rules": {
-    "func-names": ["error", "never"]
+    "func-names": ["error", "never"],
+    "quotes": [2, "single"],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "prettier/prettier": "error",
+    "comma-dangle": ["error", "never"],
   }
 }

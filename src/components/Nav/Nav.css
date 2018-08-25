@@ -1,7 +1,10 @@
 .nav-container {
   padding-top: 10px;
-  display: grid;
-  grid-template-columns: 25px 135px 135px 135px 135px;
+  display: flex;
+  justify-content: flex-start;
+}
+.nav-container button {
+  padding: 0px 16px;
 }
 
 /*

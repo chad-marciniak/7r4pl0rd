@@ -13,6 +13,7 @@
   outline: none;
   font-size: 22px;
   background: none;
+  color: #3f3f3f;
 }
 .hamburger {
   width: 24px;
@@ -26,7 +27,7 @@
   position: relative;
   background: url('../../images/traplord_sprites.png') no-repeat -36px 0;
 }
-.contact {
+/*.contact {
   animation: forwards;
   animation-duration: 2s;
   animation-name: colorup1;
@@ -87,4 +88,4 @@
     opacity: 1;
   }
 }
-
+*/

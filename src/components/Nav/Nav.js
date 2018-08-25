@@ -9,6 +9,7 @@ class NavComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      // this should be passed down from the reducer
       buttons: [],
       buttonArray: [
         { name: 'contact', link: '/', data: { page: 'contact' } },
@@ -18,22 +19,24 @@ class NavComponent extends Component {
       ]
     };
   }
+
+  // checkout new react component methods this is no longer
   componentDidMount() {
-    for (let i = 0, ln = this.state.buttonArray.length; i < ln; i++) {
-      setTimeout(
-        x => {
-          this.setState({
-            buttons: [...this.state.buttons, this.state.buttonArray[x]]
-          });
-        },
-        1000 * i,
-        i
-      );
-    }
+    // for (let i = 0, ln = this.state.buttonArray.length; i < ln; i++) {
+    //   setTimeout(
+    //     x => {
+    //       this.setState({
+    //         buttons: [...this.state.buttons, this.state.buttonArray[x]]
+    //       });
+    //     },
+    //     1000 * i,
+    //     i
+    //   );
+    // }
   }
 
   render() {
-    const links = this.state.buttons.map((button, key) => (
+    const links = this.state.buttonArray.map((button, key) => (
       <Button
         key={key}
         text={button.name}

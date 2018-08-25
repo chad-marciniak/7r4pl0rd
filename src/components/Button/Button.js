@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ButtonView from './ButtonView.js';
-import store from '../../store.js';
 import { bindActionCreators } from 'redux';
 import { toggleNav } from '../../actions/nav.js';
 import './Button.css';

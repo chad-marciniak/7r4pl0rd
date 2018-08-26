@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "Arimo";
+  src: url("../../font/Arimo.WOFF") format("woff");
+}
+
+.button {
+  font-family: Arimo;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  background: none;
+  color: #3f3f3f;
+}
+.hamburger {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  background: url('../../images/traplord_sprites.png') no-repeat;
+}
+.hamburger.active {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  background: url('../../images/traplord_sprites.png') no-repeat -36px 0;
+}
+/*.contact {
+  animation: forwards;
+  animation-duration: 2s;
+  animation-name: colorup1;
+  text-shadow: 1.2px 1.2px #006677 !important; 
+}
+.mission {
+  animation: forwards;
+  animation-duration: 2s;
+  animation-name: colorup2;
+}
+.archives {
+  animation: forwards;
+  animation-duration: 2s;
+  animation-name: colorup3;
+}
+.main {
+  animation: forwards;
+  animation-duration: 2s;
+  animation-name: colorup4;
+}
+@keyframes colorup1 {
+  from {
+    color: #3f3f3f;
+    opacity: 0;
+  }
+  to {
+    color: #12A9CC;
+    opacity: 1;
+  }
+}
+@keyframes colorup2 {
+  from {
+    color: #3f3f3f;
+    opacity: 0;
+  }
+  to {
+    color: #6565E5;
+    opacity: 1;
+  }
+}
+@keyframes colorup3 {
+  from {
+    color: #3f3f3f;
+    opacity: 0;
+  }
+  to {
+    color: #B115BA;
+    opacity: 1;
+  }
+}
+@keyframes colorup4 {
+  from {
+    color: #3f3f3f;
+    opacity: 0;
+  }
+  to {
+    color: #C11151;
+    opacity: 1;
+  }
+}
+*/

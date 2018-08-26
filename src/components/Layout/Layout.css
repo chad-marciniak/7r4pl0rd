@@ -1,0 +1,14 @@
+.layout {
+}
+
+.outer-layout {
+	width: 70%;
+  display: block;
+  padding:0px 15% 0px 15%;
+}
+
+.inner-layout {
+  display: grid;
+  grid-template-columns: auto;
+}
+

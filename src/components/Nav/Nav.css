@@ -1,10 +1,10 @@
 .nav-container {
-  padding-top: 10px;
+  margin-top: 10px;
   display: flex;
   justify-content: flex-start;
 }
 .nav-container button {
-  padding: 0px 16px;
+  margin: 0 20px;
 }
 
 /*

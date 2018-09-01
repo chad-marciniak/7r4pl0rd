@@ -1,19 +1,12 @@
-@font-face {
-  font-family: "Arimo";
-  src: url("../../font/Arimo.WOFF") format("woff");
-}
-
 .button {
-  font-family: Arimo;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
   display: block;
   border: none;
   outline: none;
-  font-size: 22px;
+  font-size: 24px;
   background: none;
-  color: #3f3f3f;
 }
 .hamburger {
   width: 24px;

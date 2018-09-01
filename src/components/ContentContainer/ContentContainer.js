@@ -1,9 +1,7 @@
 import React from 'react';
 import './ContentContainer.css';
 
-const ContentContainer = props => {
-  return <div className="content-container">{props.children}</div>;
-};
+const ContentContainer = props => props.children;
 
 export default ContentContainer;
 

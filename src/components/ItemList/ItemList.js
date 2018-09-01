@@ -10,7 +10,7 @@ class ItemList extends Component {
   }
 
   render() {
-    return <div className="item-list">item list</div>;
+    return <div>item list</div>;
   }
 }
 
